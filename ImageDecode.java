@@ -80,9 +80,7 @@ public class ImageDecode {
 			if (mod == 24) {
 				System.out.println();
 			}
-			
 		}
-		
 	}
 	
 	private static void loadInputData(File file) throws IOException {
@@ -95,15 +93,12 @@ public class ImageDecode {
 		Integer i; 
 		while ((i = br.read()) != -1) {
 			i = i - 48;
-
 			if (activeLayer.isFull()) {
 				layers.add(activeLayer = new ImageLayer(imageWidth, imageHeight));
 				count++;
 			}
 			activeLayer.loadInput(i);
 		} 
-		
 		br.close();
 	}
-	
 }
